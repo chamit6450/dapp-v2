@@ -1,0 +1,7 @@
+/* src/global.css */
+body {
+    /* @apply bg-gradient-to-r from-neutral-700 to-slate-900;  */
+     /* @apply bg-[conic-gradient(var(--tw-gradient-stops))] from-[#eafbea] via-[#6f9a8d] to-[#1f6650]; */
+    /* Change bg-blue-500 to your desired color */
+    @apply bg-gradient-to-b from-neutral-900 to-gray-900;
+}
