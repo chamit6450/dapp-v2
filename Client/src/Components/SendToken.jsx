@@ -4,6 +4,8 @@ import {
     useWallet
 } from "@solana/wallet-adapter-react";
 import { LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction } from '@solana/web3.js';
+import Navbar from './Navbar';
+
 export default function SendToken() {
     const wallet = useWallet();
     const connection = useConnection();
@@ -23,6 +25,7 @@ export default function SendToken() {
     } 
   return (
     <div>
+      <Navbar/>
         <input id='to' type='text' placeholder='Enter address to send'
          className="bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 rounded-lg h-9 w-8/12 mr-3 py-1 px-2 leading-tight focus:outline-none"
          />

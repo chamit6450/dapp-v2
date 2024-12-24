@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen mt-6">
       <nav className="flex items-center justify-between bg-zinc-800 text-white py-3 px-8 rounded-full w-[80%] max-w-4xl mx-auto ">
@@ -9,14 +11,14 @@ const Navbar = () => {
 
         
         <div className="flex space-x-8">
-          <a href="#home" className="hover:text-gray-400">
+          <a onClick={()=> navigate("/")} className="hover:text-gray-400">
             Home
           </a>
-          <a href="/Airdrop" className="hover:text-gray-400">
+          <a onClick={()=> navigate("/Airdrop")} className="hover:text-gray-400">
             Airdrop
           </a>
-          <a href="#career" className="hover:text-gray-400">
-            Career
+          <a onClick={()=> navigate("/SendToken")} className="hover:text-gray-400">
+            SendToken
           </a>
         </div>
 
