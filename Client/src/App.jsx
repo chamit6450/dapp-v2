@@ -8,9 +8,23 @@ import Signin from './Components/Signin';
 import './global.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import { useNavigate } from 'react-router-dom';
+import {
+  ConnectionProvider,
+  WalletProvider,
+} from "@solana/wallet-adapter-react";
+
+import {
+  WalletModalProvider
+} from "@solana/wallet-adapter-react-ui";
 function App() {
   return (
     <div>
+      <ConnectionProvider endpoint={"https://divine-capable-seed.solana-devnet.quiknode.pro/3f4d8f9a6adc7a6ed015835e102028040732f559"}>
+            <WalletProvider wallets={[]} autoConnect>
+              <WalletModalProvider>
+                
+              
       <BrowserRouter>
       <Routes>
         <Route path='/Home' element={<Home/>}/>
@@ -20,6 +34,9 @@ function App() {
         <Route path="/SendToken" element={<SendToken />} />
       </Routes>
     </BrowserRouter>
+    </WalletModalProvider>
+            </WalletProvider>
+          </ConnectionProvider>
     </div>
   )
 }

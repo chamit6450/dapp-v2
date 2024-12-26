@@ -7,7 +7,7 @@ import Navbar from './Navbar';
 
 function Airdrop() {
     const wallet = useWallet();
-    const connection = useConnection();
+    const {connection }= useConnection();
     const [amt, setAmt] = useState();
 
     async function sendAirDrop() {

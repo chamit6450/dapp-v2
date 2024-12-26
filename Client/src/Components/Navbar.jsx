@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="text-2xl font-bold">d</div>
 
         
-        <div className="flex space-x-8">
+        <div className="flex space-x-8 cursor-pointer">
           <a onClick={()=> navigate("/Home")} className="hover:text-gray-400">
             Home
           </a>
