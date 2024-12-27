@@ -9,7 +9,7 @@ import { Buffer } from 'buffer';
 
 export default function SendToken() {
     const wallet = useWallet();
-    const connection = useConnection();
+    const {connection}= useConnection();
 
     async function sendToken() {
         if (!wallet.publicKey) {
