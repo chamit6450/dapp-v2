@@ -19,9 +19,11 @@ const Navbar = () => {
     <div className="mt-6">
       <nav className="flex items-center justify-between bg-zinc-800 text-white py-3 px-8 rounded-full w-[80%] max-w-4xl mx-auto ">
       
-        <div className="text-2xl font-bold">d</div>
 
-        
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8H5m12 0a1 1 0 0 1 1 1v2.6M17 8l-4-4M5 8a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.6M5 8l4-4 4 4m6 4h-4a2 2 0 1 0 0 4h4a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1Z"/>
+</svg>
+
         <div className="flex space-x-8 cursor-pointer">
           <a onClick={()=> navigate("/Home")} className="hover:text-gray-400">
             Home
@@ -34,10 +36,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Launch App Button */}
-        {/* <button className="bg-gray-100 text-black px-4 py-2 rounded-full hover:bg-gray-200">
-          Launch App
-        </button> */}
+       
         <ConnectionProvider endpoint={"https://divine-capable-seed.solana-devnet.quiknode.pro/3f4d8f9a6adc7a6ed015835e102028040732f559"}>
       <WalletProvider wallets={[]} autoConnect>
         <WalletModalProvider>

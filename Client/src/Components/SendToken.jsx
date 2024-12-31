@@ -50,7 +50,7 @@ export default function SendToken() {
                     <h1 className="text-4xl font-extrabold mb-4">
                         Send SOL Tokens
                     </h1>
-                    <p className="text-lg mb-8">
+                    <p className="font-mono text-lg mb-8">
                         Transfer SOL to any address on the Solana network. Simply enter the recipient's address and the amount of SOL you want to send, then click "Send".
                     </p>
 

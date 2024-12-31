@@ -5,9 +5,10 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <h1 className="animate-fadeIn text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-cyan-400 to-green-500 text-center mt-16">
-        Welcome to Crypto World!
-      </h1>
+      <h1 className="animate-fadeIn text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-400 to-teal-300 text-center mt-16">
+  Unlock the Future of Decentralized Apps with Solana
+</h1>
+
 
       <div className="animate-slidein flex mt-20">
         {/* Secure Transactions Card */}

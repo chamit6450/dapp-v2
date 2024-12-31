@@ -37,7 +37,7 @@ function Airdrop() {
                     <h1 className="text-4xl font-extrabold mb-4">
                         Airdrop on Solana Network
                     </h1>
-                    <p className="text-lg mb-8">
+                    <p className="font-mono text-lg mb-8">
                         Participate in the airdrop and receive free SOL tokens! Simply enter the amount of SOL you want to claim and click "Send" to initiate the process.
                     </p>
                     
