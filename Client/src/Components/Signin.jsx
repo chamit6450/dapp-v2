@@ -1,4 +1,4 @@
-import React, { useState, useMemo} from 'react';
+import React, { useState, useMemo, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import "@solana/wallet-adapter-react-ui/styles.css";
@@ -9,6 +9,7 @@ function Signin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const [token, setToken] = useState(false);
 
   // useNavigate hook for navigation
   const navigate = useNavigate();
@@ -35,9 +36,12 @@ function Signin() {
         // If login is successful
         alert("Login successful!");
         setMessage("Login successful!");
-
-        // Navigate to the Home page with the user's email in the state
-        navigate("/Home", { state: { email } });
+        setToken(data.token);
+        
+        // Navigate to the Home page with the user's email in the state        
+          localStorage.setItem("auth_token",token);
+          navigate("/home");
+        
       } else {
         // If login fails, display an error message
         setMessage(data.msg || "Login failed. Please check your credentials.");
@@ -49,10 +53,9 @@ function Signin() {
     }
   };
 
+
   return (
     <>
-      
-
       {/* Main section for login form */}
       <section className="bg-gray-50 dark:bg-gray-900">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -115,6 +118,7 @@ function Signin() {
           </div>
         </div>
       </section>
+     
     </>
   );
 }

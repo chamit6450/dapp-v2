@@ -72,6 +72,7 @@ app.post('/login', async function (req, res) {
 
         const token = jwt.sign({ email: user.email }, jwtPassword, { expiresIn: '1h' }); // Generate JWT token
         res.json({ token });
+
     } catch (error) {
         res.status(500).send({ msg: "Error logging in" });
     }
