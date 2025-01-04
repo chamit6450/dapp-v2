@@ -9,7 +9,7 @@ function Signin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
-  const [token, setToken] = useState(false);
+  const [token, setToken] = useState('');
 
   // useNavigate hook for navigation
   const navigate = useNavigate();
@@ -37,9 +37,9 @@ function Signin() {
         alert("Login successful!");
         setMessage("Login successful!");
         setToken(data.token);
-        
+
         // Navigate to the Home page with the user's email in the state        
-          localStorage.setItem("auth_token",token);
+          localStorage.setItem("auth_token",data.token);
           navigate("/home");
         
       } else {
