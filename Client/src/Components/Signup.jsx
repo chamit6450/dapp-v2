@@ -16,7 +16,7 @@ function Signup() {
   const handleSignup = async () => {
     try {
       // Send POST request to the signup API
-      const response = await fetch("http://localhost:3000/signup", {
+      const response = await fetch("https://dapp-v2-be.vercel.app/signup", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

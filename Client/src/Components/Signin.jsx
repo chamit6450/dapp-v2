@@ -18,7 +18,7 @@ function Signin() {
   const handleLogin = async () => {
     try {
       // Send POST request to the login API
-      const response = await fetch("http://localhost:3000/login", {
+      const response = await fetch("https://dapp-v2-be.vercel.app/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
