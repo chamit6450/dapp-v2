@@ -1,5 +1,5 @@
 const express = require('express');
-const { Data, User } = require('./db');
+const { Data, User } = require('./Db');
 const app = express();
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
